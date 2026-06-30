@@ -1,0 +1,109 @@
+---
+y_bias: 0.4
+scaling_factor: 1.2
+fontsize: 13
+mol_gradation: 15
+bar_line_edgecolor: '#555555'
+bar_linewidth: 0.0
+bar_alpha: 1.0
+vline_alpha : 0.95
+vline_linewidth: 1.2
+replace_rect_height: 0.06
+replace_radius_bias: 0.06
+fontname: 'Helvetica'
+fontcolor: 'black'
+composition_fontcolor: '#BB5566'
+boundary_flag: False
+---
+circle_linewidth: 0.8
+circle_alpha: 0.1
+circle_color: "black"
+center_edgecolor: 'black'
+center_linewidth: 2
+center_alpha: 1
+center_bias: 0.025
+---
+cbar:
+  y_shift: 0.0
+  aspect: 30
+  pad : 0.165
+  x_shift: 0.0
+  width_shift: 0.0
+  height_shift: 0.0
+  shrink: 0.99
+  orientation: 'horizontal'
+gibbs:
+  cmap_color: 'coolwarm'
+  cmap_n_colors: 10
+  norm_max_bound: -50
+  norm_min_bound: 50
+  cmap_max_bound: 1.0
+  cmap_min_bound: 0.0
+  label: "$G_{mix} (meV/atom)$"
+e_hull:
+  cmap_color: 'OrRd'
+  cmap_n_colors: 10
+  stable_color: '#009988'
+  cmap_max_bound: 0.75
+  cmap_min_bound: 0.1
+  unstable_color: 'darkred'
+  stable_bound: 0.002
+  metastable_bound: 0.05
+  max_bound: 0.4
+  label: "$E_{hull}$ (eV/atom)"
+phase_boundary:
+  miscible_color: '#009988'
+  immiscible_color: 'salmon'
+  stable_bound: 0.002
+  max_bound: 0.4
+  label: "$E_{hull}$ (eV/atom)"
+no_of_phases:
+  cmap_color: 'coolwarm'
+  cmap_n_colors: 4
+  cmap_max_bound: 1.0
+  cmap_min_bound: 0.0
+  label: "No. of Phases"
+entropy:
+  cmap_color: 'tab20c'
+  cmap_n_colors: 5
+  cmap_max_bound: 1.0
+  cmap_min_bound: 0.0
+  label: "$-Entropy/k_b$"
+melt:
+  cmap_color: 'plasma'
+  max_bound: 3700
+  label: "$T_{melt}$ (K)"
+density:
+  cmap_color: 'jet'
+  cmap_n_colors: 8
+  cmap_max_bound: 1.0
+  cmap_min_bound: 0.2
+  norm_min_bound: 7
+  norm_max_bound: 9
+  label: "$\\rho (g/cc)$"
+elastic:
+  cmap_color: 'jet'
+  norm_min_bound: 100
+  norm_max_bound: 300
+  label: "$E (GPa)$"
+phase_fraction:
+  cmap_color: 'coolwarm_r'
+  cmap_n_colors: 5
+  norm_max_bound: 1.0
+  norm_min_bound: 0
+  cmap_max_bound: 1.0
+  cmap_min_bound: 0.0
+  label: "Solid Solution Phase Fraction"
+eigen_value:
+  cmap_color: 'coolwarm_r'
+  norm_min_bound: -1
+  norm_max_bound: 1
+  label: "$\\lambda_{min}$"
+spinodal_type:
+  cmap_color: 'Spectral_r'
+  cmap_n_colors: 7
+  cmap_max_bound: 1.0
+  cmap_min_bound: 0.0
+  norm_min_bound: 0
+  norm_max_bound: 4
+  label: "Spinodal Decomposition Type"
