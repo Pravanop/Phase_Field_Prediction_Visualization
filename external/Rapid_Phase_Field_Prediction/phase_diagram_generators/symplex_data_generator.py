@@ -3,7 +3,11 @@ import numpy as np
 from pycalphad import Database, equilibrium
 from pycalphad import variables as v
 import pandas as pd
+from pathlib import Path
 
+
+MODULE_DIR = Path(__file__).resolve().parent
+PHASEFIELD_ROOT = MODULE_DIR.parents[0]
 
 class symplexDataGenerator:
 	
@@ -23,21 +27,31 @@ class symplexDataGenerator:
 		return '-'.join(self.alloy_system)
 	
 	def _extract_data_template(self):
-		order = self._order()
-		mol_dict = {}
-		if order == 4:
-			with open(f"/Users/pravanomprakash/Documents/Projects/RPFP_web/external/Rapid_Phase_Field_Prediction/phase_diagram_generators/mol_grid_data/quaternary_raw.pkl", "rb") as f:
-				mol_dict = pickle.load(f)
-		if order == 5:
-			with open(f"/Users/pravanomprakash/Documents/Projects/RPFP_web/external/Rapid_Phase_Field_Prediction/phase_diagram_generators/mol_grid_data/quinary_raw.pkl", "rb") as f:
-				mol_dict = pickle.load(f)
+	    order = self._order()
 	
-		return mol_dict
+	    if order == 4:
+	        grid_path = MODULE_DIR / "mol_grid_data" / "quaternary_raw.pkl"
+	    elif order == 5:
+	        grid_path = MODULE_DIR / "mol_grid_data" / "quinary_raw.pkl"
+	    else:
+	        raise ValueError(f"Unsupported alloy order: {order}")
 	
+	    if not grid_path.exists():
+	        raise FileNotFoundError(f"Mol grid file not found: {grid_path}")
+	
+	    with open(grid_path, "rb") as f:
+	        mol_dict = pickle.load(f)
+	
+	    return mol_dict
+
 	def _extract_tdb(self):
 		composition = self._composition()
-		path = f"/Users/pravanomprakash/Documents/Projects/RPFP_web/external/Rapid_Phase_Field_Prediction/input/tdb/{composition}.tdb"
-		return path
+		tdb_path = PHASEFIELD_ROOT / "input" / "tdb" / f"{composition}.tdb"
+		
+		if not tdb_path.exists():
+			raise FileNotFoundError(f"TDB file not found: {tdb_path}")
+		
+		return str(tdb_path)
 	
 	@staticmethod
 	def predict_SPSS_fraction(df, comps, phases, feats, lattice):
