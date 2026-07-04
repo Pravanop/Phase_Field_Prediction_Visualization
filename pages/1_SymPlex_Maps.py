@@ -135,8 +135,9 @@ if run_button:
         plt.close(result.figure)
 
     except Exception as exc:
-        st.error("SymPlex prediction failed.")
-        st.code(str(exc))
-
-        with st.expander("Full traceback"):
-            st.code(traceback.format_exc())
+        pass
+        # st.error("SymPlex prediction failed.")
+        # st.code(str(exc))
+        #
+        # with st.expander("Full traceback"):
+        #     st.code(traceback.format_exc())

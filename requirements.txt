@@ -4,8 +4,7 @@ pandas
 matplotlib
 scipy
 pycalphad
+symengine
 xarray
-dask
 tinydb
-sympy
 pymatgen
