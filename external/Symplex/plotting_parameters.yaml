@@ -1,6 +1,6 @@
 ---
 y_bias: 0.4
-scaling_factor: 1.2
+scaling_factor: 1.5
 fontsize: 13
 mol_gradation: 15
 bar_line_edgecolor: '#555555'
