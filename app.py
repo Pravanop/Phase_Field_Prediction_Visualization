@@ -10,15 +10,15 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Rapid and Accurate Prediction of Phase Fields")
+st.title("Rapid Alloy Phase-Field Generator (RAPGen)")
 
 st.markdown(
     """
-    Interactive web interface for phase-diagram and solid solution stability prediction.
+    Interactive web interface for phase-diagram and solid solution stability prediction of complex alloys.
 
     Use the sidebar to choose a module:
 
-    - **SymPlex Maps**: Quaternary/quinary property maps.
+    - **SymPlex Maps**: Compressed visualizations of high-dimensional phase spaces.
     - **Phase Fractions**: Phase fractions vs. temperature for a fixed composition.
     - **Phase Diagrams**: Binary and ternary phase diagrams.
     """
@@ -27,10 +27,10 @@ st.markdown(
 st.info(
 	"""
 	Please cite these papers if you use the data from this website:
-	- [1] Prediction of Phase Fields
-	- [2] SymPlex
-	- [3] PyCalphad
-	- [4] Materials Project
+	- [1] Prediction of Phase Fields [To be updated]
+	- [2] Cavin, J*, Omprakash, P*, Couet, A., & Mishra, R. (2025). SymPlex plots for visualizing properties in high-dimensional alloy spaces. Scripta Materialia, 268, 116840.
+	- [3] Zhang, Z., Li, M., Cavin, J., Flores, K., & Mishra, R. (2022). 
+	A fast and robust method for predicting the phase stability of refractory complex concentrated alloys using pairwise mixing enthalpy. Acta Materialia, 241, 118389.
 	
 	"""
 )
