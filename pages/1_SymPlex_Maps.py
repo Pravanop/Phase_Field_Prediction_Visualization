@@ -95,7 +95,7 @@ if run_button:
 
         with right:
             st.subheader("SymPlex plot")
-            st.pyplot(result.figure, use_container_width=True)
+            st.pyplot(result.figure, use_container_width=False)
 
         st.subheader("Raw path-wise data")
 
