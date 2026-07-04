@@ -19,7 +19,7 @@ def draw_circle_in_polar(radius: float, ax: plt.Axes, y_bias) -> None:
 	
 def scatter_center(scatter: float, ax: plt.Axes, cmap, norm, y_bias) -> None:
 	
-	theta = np.linspace(0, 1 * np.pi, 100)
+	theta = np.linspace(0, 2 * np.pi, 50)
 	ax.plot(
 		theta,
 		[y_bias - property_yaml["center_bias"]] * len(theta),
