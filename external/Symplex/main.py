@@ -266,7 +266,7 @@ def plot_circles_center(data, n, plot_grid, color_params, plot_params, central_p
 			draw_circle_in_polar(radius=pm.distance_calculator(n, N) * scaling_factor, ax=ax, y_bias=y_bias)
 
 	point1 = data[list(data.keys())[0]][0]
-	# scatter_center(scatter=point1, ax=ax, cmap=cmap, norm=norm, y_bias=y_bias)
+	scatter_center(scatter=point1, ax=ax, cmap=cmap, norm=norm, y_bias=y_bias)
 
 def main(composition,
 		 plot_grid,
