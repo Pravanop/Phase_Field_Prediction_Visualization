@@ -33,7 +33,7 @@ def generate_symplex_plot(alloy_system, temperature, constraint_element, propert
     
     constraint_element_index = alloy_system.index(constraint_element)
     
-    fig = plt.figure(figsize=(3.58, 4.5))
+    fig = plt.figure(figsize=(6, 6))
     ax1 = fig.add_subplot(projection='polar')
     ax1.set_yticks([])
     ax1.set_xticks([])
@@ -66,8 +66,8 @@ def generate_symplex_plot(alloy_system, temperature, constraint_element, propert
                     central_point=central_point,
                     special_points=special_points)
     
-    ax1.text(0.95, -0.18, f"{temperature}K", ha='center', va='center', transform=ax1.transAxes)
-    fig.tight_layout()
+    # ax1.text(0.95, -0.18, f"{temperature}K", ha='center', va='center', transform=ax1.transAxes)
+    # fig.tight_layout()
     return fig
 
     
