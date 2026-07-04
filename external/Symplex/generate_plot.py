@@ -1,4 +1,11 @@
 from typing import List, Iterable
+from pathlib import Path
+import sys
+
+SYMPLEX_ROOT = Path(__file__).resolve().parent
+
+if str(SYMPLEX_ROOT) not in sys.path:
+    sys.path.insert(0, str(SYMPLEX_ROOT))
 
 from main import main
 import numpy as np
