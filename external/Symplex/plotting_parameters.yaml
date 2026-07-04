@@ -19,9 +19,9 @@ circle_linewidth: 0.8
 circle_alpha: 0.1
 circle_color: "black"
 center_edgecolor: 'black'
-center_linewidth: 2
+center_linewidth: 6
 center_alpha: 1
-center_bias: 0.025
+center_bias: 0.0
 ---
 cbar:
   y_shift: 0.0
