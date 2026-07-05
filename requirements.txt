@@ -8,3 +8,4 @@ symengine
 xarray
 tinydb
 pymatgen
+yaml
